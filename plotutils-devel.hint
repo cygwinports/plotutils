@@ -1,0 +1,4 @@
+category: _obsolete
+requires: libplot-devel libplotter-devel libxmi-devel
+sdesc: "Obsolete package"
+ldesc: "Obsolete package"

@@ -1,0 +1,46 @@
+inherit font
+
+DESCRIPTION="2-D vector graphics library and scientific data plotting programs"
+HOMEPAGE="http://www.gnu.org/software/plotutils/"
+SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
+PATCH_URI="
+	mirror://portage/media-libs/${PN}/files/${P}-rangecheck.patch
+	mirror://portage/media-libs/${PN}/files/${P}-fix-tests.patch
+	2.5.1-libtool22.patch
+	2.5.1-no-undefined.patch
+"
+
+PKG_NAMES="${PN} libplot2 libplot-devel libplotter2 libplotter-devel libxmi0 libxmi-devel ${PN}-devel ${PN}-doc"
+plotutils_CONTENTS="--exclude=libplot --exclude=libxmi* etc/ usr/bin/*.exe usr/share/"
+libplot2_CONTENTS="usr/bin/cygplot-2.dll"
+libplot_devel_CONTENTS="--exclude=plotter* usr/include/plot*.h
+                        usr/lib/libplot.* usr/share/libplot/"
+libplotter2_CONTENTS="usr/bin/cygplotter-2.dll"
+libplotter_devel_CONTENTS="usr/include/plotter.h usr/lib/libplotter.*"
+libxmi0_CONTENTS="usr/bin/cygxmi-0.dll"
+libxmi_devel_CONTENTS="usr/include/xmi.h usr/lib/libxmi.* usr/share/info/libxmi*"
+plotutils_devel_CONTENTS=	# compat
+plotutils_doc_CONTENTS=	# compat
+
+DIFF_EXCLUDES="config.hin"
+
+CYGCONF_ARGS="
+	--enable-libplotter
+	--enable-libxmi
+	--with-athena
+	--with-xpm
+"
+
+src_install() {
+	cd ${B}
+	cyginstall
+
+	cd ${S}/fonts
+
+	fontinto misc
+	dofont pcf/*.pcf
+	gzip ${D}/usr/share/fonts/misc/*.pcf
+
+	fontinto Type1
+	dofont pfb/*.pfb
+}

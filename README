@@ -1,0 +1,202 @@
+plotutils
+------------------------------------------
+The GNU plotutils package contains software for both programmers and 
+technical users. Its centerpiece is libplot, a powerful C/C++ function 
+library for exporting 2-D vector graphics in many file formats, both 
+vector and raster. It can also do vector graphics animations. Besides 
+libplot, the package contains command-line programs for plotting 
+scientific data. Many of them use libplot to export graphics.
+
+Runtime requirements:
+  cygwin-1.5.25-15
+  libpng12-1.2.33-1
+  libX11_6-1.1.5-1
+  libXaw7-1.0.4-2
+  libXext6-1.0.4-1
+  libXt6-1.0.5-2
+
+Build requirements:
+(besides corresponding -devel packages)
+  autoconf2.5-2.63-1
+  automake1.10-1.10.1-2
+  binutils-20080624-2
+  cygport-0.4.2-1
+  gawk-3.1.6-1
+  gcc-core-3.4.4-3
+  gcc-g++-3.4.4-3
+  libtool-2.2.2-2
+  make-3.81-1
+  sed-4.1.5-2
+
+Canonical website:
+  http://www.gnu.org/software/plotutils/
+
+Canonical download:
+  ftp://ftp.gnu.org/gnu/plotutils/
+
+-------------------------------------------
+
+Build instructions:
+  unpack plotutils-2.5.1-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./plotutils-2.5.1-X.cygport all
+
+This will create:
+  /usr/src/libplot-devel-2.5.1-X.tar.bz2
+  /usr/src/libplot2-2.5.1-X.tar.bz2
+  /usr/src/libplotter-devel-2.5.1-X.tar.bz2
+  /usr/src/libplotter2-2.5.1-X.tar.bz2
+  /usr/src/libxmi-devel-2.5.1-X.tar.bz2
+  /usr/src/libxmi0-2.5.1-X.tar.bz2
+  /usr/src/plotutils-2.5.1-X-src.tar.bz2
+  /usr/src/plotutils-2.5.1-X.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary package:
+
+  /etc/postinstall/plotutils.sh
+  /usr/bin/double.exe
+  /usr/bin/graph.exe
+  /usr/bin/ode.exe
+  /usr/bin/pic2plot.exe
+  /usr/bin/plot.exe
+  /usr/bin/plotfont.exe
+  /usr/bin/spline.exe
+  /usr/bin/tek2plot.exe
+  /usr/share/doc/plotutils-2.5.1/AUTHORS
+  /usr/share/doc/plotutils-2.5.1/COPYING
+  /usr/share/doc/plotutils-2.5.1/INSTALL
+  /usr/share/doc/plotutils-2.5.1/NEWS
+  /usr/share/doc/plotutils-2.5.1/README
+  /usr/share/doc/plotutils-2.5.1/THANKS
+  /usr/share/doc/plotutils-2.5.1/TODO
+  /usr/share/fonts/Type1/a010013l.pfb
+  /usr/share/fonts/Type1/a010015l.pfb
+  /usr/share/fonts/Type1/a010033l.pfb
+  /usr/share/fonts/Type1/a010035l.pfb
+  /usr/share/fonts/Type1/b018012l.pfb
+  /usr/share/fonts/Type1/b018015l.pfb
+  /usr/share/fonts/Type1/b018032l.pfb
+  /usr/share/fonts/Type1/b018035l.pfb
+  /usr/share/fonts/Type1/c059013l.pfb
+  /usr/share/fonts/Type1/c059016l.pfb
+  /usr/share/fonts/Type1/c059033l.pfb
+  /usr/share/fonts/Type1/c059036l.pfb
+  /usr/share/fonts/Type1/d050000l.pfb
+  /usr/share/fonts/Type1/n019003l.pfb
+  /usr/share/fonts/Type1/n019004l.pfb
+  /usr/share/fonts/Type1/n019023l.pfb
+  /usr/share/fonts/Type1/n019024l.pfb
+  /usr/share/fonts/Type1/n019043l.pfb
+  /usr/share/fonts/Type1/n019044l.pfb
+  /usr/share/fonts/Type1/n019063l.pfb
+  /usr/share/fonts/Type1/n019064l.pfb
+  /usr/share/fonts/Type1/n021003l.pfb
+  /usr/share/fonts/Type1/n021004l.pfb
+  /usr/share/fonts/Type1/n021023l.pfb
+  /usr/share/fonts/Type1/n021024l.pfb
+  /usr/share/fonts/Type1/n022003l.pfb
+  /usr/share/fonts/Type1/n022004l.pfb
+  /usr/share/fonts/Type1/n022023l.pfb
+  /usr/share/fonts/Type1/n022024l.pfb
+  /usr/share/fonts/Type1/p052003l.pfb
+  /usr/share/fonts/Type1/p052004l.pfb
+  /usr/share/fonts/Type1/p052023l.pfb
+  /usr/share/fonts/Type1/p052024l.pfb
+  /usr/share/fonts/Type1/s050000l.pfb
+  /usr/share/fonts/Type1/z003034l.pfb
+  /usr/share/fonts/misc/tekfont0.pcf.gz
+  /usr/share/fonts/misc/tekfont1.pcf.gz
+  /usr/share/fonts/misc/tekfont2.pcf.gz
+  /usr/share/fonts/misc/tekfont3.pcf.gz
+  /usr/share/info/plotutils.info.gz
+  /usr/share/man/man1/ode.1.gz
+  /usr/share/man/man1/plot.1.gz
+  /usr/share/man/man1/plotfont.1.gz
+  /usr/share/man/man1/spline.1.gz
+  /usr/share/man/man1/tek2plot.1.gz
+  /usr/share/ode/README
+  /usr/share/ode/atwoods.ode
+  /usr/share/ode/bead.ode
+  /usr/share/ode/chem.ode
+  /usr/share/ode/coupled.ode
+  /usr/share/ode/ddho.ode
+  /usr/share/ode/dynamo.ode
+  /usr/share/ode/henon.ode
+  /usr/share/ode/limitcycle.ode
+  /usr/share/ode/lorenz.ode
+  /usr/share/ode/lunar.sh
+  /usr/share/ode/orbit.ode
+  /usr/share/ode/population.ode
+  /usr/share/ode/qcd.ode
+  /usr/share/ode/rumor.ode
+  /usr/share/ode/soliton.ode
+  /usr/share/ode/viscous.ode
+  /usr/share/pic2plot/README
+  /usr/share/pic2plot/macros.pic
+  /usr/share/pic2plot/pic0.ps
+  /usr/share/pic2plot/pic1.ps
+  /usr/share/pic2plot/picmacros.ps
+  /usr/share/tek2plot/README
+  /usr/share/tek2plot/aitest.tek
+  /usr/share/tek2plot/dmerc.tek
+  /usr/share/tek2plot/fotest.tek
+  /usr/share/tek2plot/imtesth.tek
+  /usr/share/tek2plot/karney.tek
+  /usr/share/tek2plot/ocpred.tek
+  /usr/share/tek2plot/scale.tek
+  /usr/share/tek2plot/skymap.tek
+  /usr/share/tek2plot/skymap2.tek
+  /usr/share/tek2plot/usmap.tek
+
+(libplot2)
+  /usr/bin/cygplot-2.dll
+
+(libplot-devel)
+  /usr/include/plot.h
+  /usr/include/plotcompat.h
+  /usr/lib/libplot.a
+  /usr/lib/libplot.dll.a
+  /usr/lib/libplot.la
+  /usr/share/libplot/README
+  /usr/share/libplot/colors.txt
+  /usr/share/libplot/demo-page
+  /usr/share/libplot/h-demo.c
+  /usr/share/libplot/h-fonts.doc
+  /usr/share/libplot/h-glyphs.doc
+  /usr/share/libplot/hershey.bib
+  /usr/share/libplot/kana.doc
+  /usr/share/libplot/kanji.doc
+
+(libplotter2)
+  /usr/bin/cygplotter-2.dll
+
+(libplotter-devel)
+  /usr/include/plotter.h
+  /usr/lib/libplotter.a
+  /usr/lib/libplotter.dll.a
+  /usr/lib/libplotter.la
+
+(libxmi0)
+  /usr/bin/cygxmi-0.dll
+
+(libxmi-devel)
+  /usr/include/xmi.h
+  /usr/lib/libxmi.a
+  /usr/lib/libxmi.dll.a
+  /usr/lib/libxmi.la
+  /usr/share/info/libxmi.info.gz
+
+------------------
+
+Port Notes:
+
+----- version 2.5.1-1 -----
+Version bump; last official release was 2.4.1-1.
+
+
+Cygwin port maintained by:
+http://sourceware.org/cygwinports/
