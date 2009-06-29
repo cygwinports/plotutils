@@ -1,5 +1,5 @@
 category: Graphics
-requires: cygwin libxmi0
+requires: libxmi0
 external-source: plotutils
 sdesc: "2-D vector graphics rasterization library (development)"
 ldesc: "The GNU plotutils package contains software for both 

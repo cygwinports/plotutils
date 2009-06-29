@@ -1,5 +1,5 @@
 category: Graphics
-requires: cygwin libplot2 libpng12-devel libX11-devel libXaw-devel libXext-devel libXt-devel
+requires: libplot2 libpng12-devel libX11-devel libXaw-devel libXext-devel libXt-devel
 external-source: plotutils
 sdesc: "2-D vector graphics export library (C libdevel)"
 ldesc: "The GNU plotutils package contains software for both 
