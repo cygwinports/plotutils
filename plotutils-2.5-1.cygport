@@ -5,13 +5,12 @@ HOMEPAGE="http://www.gnu.org/software/plotutils/"
 SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 PATCH_URI="
 	mirror://portage/media-libs/${PN}/files/${P}-rangecheck.patch
-	mirror://portage/media-libs/${PN}/files/${P}-fix-tests.patch
 	2.5.1-libtool22.patch
-	2.5.1-no-undefined.patch
+	2.5-no-undefined.patch
 "
 
-PKG_NAMES="${PN} libplot2 libplot-devel libplotter2 libplotter-devel libxmi0 libxmi-devel ${PN}-devel ${PN}-doc"
-plotutils_CONTENTS="--exclude=libplot --exclude=libxmi* etc/ usr/bin/*.exe usr/share/"
+PKG_NAMES="${PN} libplot2 libplot-devel libplotter2 libplotter-devel libxmi0 libxmi-devel ${PN}-devel ${PN}-doc font-tektronix-misc"
+plotutils_CONTENTS="--exclude=fonts --exclude=libplot --exclude=libxmi* usr/bin/*.exe usr/share/"
 libplot2_CONTENTS="usr/bin/cygplot-2.dll"
 libplot_devel_CONTENTS="--exclude=plotter* usr/include/plot*.h
                         usr/lib/libplot.* usr/share/libplot/"
@@ -21,6 +20,7 @@ libxmi0_CONTENTS="usr/bin/cygxmi-0.dll"
 libxmi_devel_CONTENTS="usr/include/xmi.h usr/lib/libxmi.* usr/share/info/libxmi*"
 plotutils_devel_CONTENTS=	# compat
 plotutils_doc_CONTENTS=	# compat
+font_tektronix_misc_CONTENTS="etc/ usr/share/fonts/misc/"
 
 DIFF_EXCLUDES="config.hin"
 
@@ -40,7 +40,4 @@ src_install() {
 	fontinto misc
 	dofont pcf/*.pcf
 	gzip ${D}/usr/share/fonts/misc/*.pcf
-
-	fontinto Type1
-	dofont pfb/*.pfb
 }

@@ -1,5 +1,5 @@
 category: Graphics Math
-requires: libplot2 mkfontdir mkfontscale fontconfig font-encodings font-alias
+requires: libgcc1 libplot2 ghostscript-fonts-std font-tektronix-misc
 sdesc: "2-D scientific data plotting utilities"
 ldesc: "The GNU plotutils package contains software for both 
 programmers and technical users. Its centerpiece is libplot, a powerful 

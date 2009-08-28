@@ -1,5 +1,5 @@
 category: Graphics
-requires: libpng12 libX11_6 libXaw7 libXext6 libXt6
+requires: libgcc1 libpng12 libstdc++6 libX11_6 libXaw7 libXext6 libXt6
 external-source: plotutils
 sdesc: "2-D vector graphics export library (C++ runtime)"
 ldesc: "The GNU plotutils package contains software for both 
