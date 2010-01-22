@@ -4,9 +4,9 @@ DESCRIPTION="2-D vector graphics library and scientific data plotting programs"
 HOMEPAGE="http://www.gnu.org/software/plotutils/"
 SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 PATCH_URI="
-	mirror://portage/media-libs/${PN}/files/${P}-rangecheck.patch
+	mirror://portage/media-libs/${PN}/files/${PN}-2.5.1-rangecheck.patch
 	2.5.1-libtool22.patch
-	2.5-no-undefined.patch
+	2.6-no-undefined.patch
 "
 
 PKG_NAMES="${PN} libplot2 libplot-devel libplotter2 libplotter-devel libxmi0 libxmi-devel ${PN}-devel ${PN}-doc font-tektronix-misc"
